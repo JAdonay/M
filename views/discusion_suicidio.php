@@ -21,7 +21,7 @@
         <div class="forum__edit">
             <form action="" name="form__thread" method="post" onsubmit="return false">
                 <div class="input-group">
-                    <select class="input-group-addon">
+                    <select class="input-group-addon" id="select__categoria__foro">
                         <option></option>
                     </select>
                     <input type="text" id="titleThreatInput" placeholder="Escriba el título del hilo">

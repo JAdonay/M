@@ -1,14 +1,16 @@
 <?php
+    include('../models/Categorias.php');
     $accion=$_POST["accion"];
+    $categorias=new Categorias();
     switch ($accion) {
         case 'consultar':
-            ConsultarCategorias();
+            ConsultarCategorias($categorias);
             break;
         
         default:
             # code...
             break;
     }
-    function ConsultarCategorias(){
-        
+    function ConsultarCategorias($categorias){
+        $categorias->ShowCategorias();
     }

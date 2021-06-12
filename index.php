@@ -1,4 +1,5 @@
 <?php
+    // Iniciar Sesón
     session_start();
     require('vendor/autoload.php');
     $dotenv = Dotenv\Dotenv::createMutable(__DIR__);
