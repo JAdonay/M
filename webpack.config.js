@@ -48,8 +48,10 @@ var session={
                   // Compiles Sass to CSS
                   "sass-loader",
                 ],
-              },
+              }
+              
         ],
+        
     },
 };
 module.exports=[index,session]

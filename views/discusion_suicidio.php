@@ -82,9 +82,10 @@
 							</li>
 						</ul>
 					</div>
-					<div id="output" contenteditable="true"></div>
+					<div id="output" name="contenido" contenteditable="true"></div>
 				</div>
             </form>
         </div>
     </div>
 </div>
+<script src="../../src/functions/Categorias.js"></script>
