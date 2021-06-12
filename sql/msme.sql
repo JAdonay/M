@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-06-2021 a las 23:21:11
+-- Tiempo de generación: 12-06-2021 a las 03:43:09
 -- Versión del servidor: 10.4.19-MariaDB
 -- Versión de PHP: 8.0.6
 
@@ -26,6 +26,18 @@ USE `msme`;
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `foros`
+--
+
+CREATE TABLE `foros` (
+  `id_foro` bigint(255) NOT NULL,
+  `nombre_foro` text COLLATE utf8_bin NOT NULL,
+  `restricción` tinyint(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `perfiles`
 --
 
@@ -35,6 +47,13 @@ CREATE TABLE `perfiles` (
   `apellido` char(40) COLLATE utf8_bin DEFAULT NULL,
   `razon` text COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Volcado de datos para la tabla `perfiles`
+--
+
+INSERT INTO `perfiles` (`id_perfil`, `nombre`, `apellido`, `razon`) VALUES
+(1, 'Gerset', 'Linarez', 'Nada');
 
 -- --------------------------------------------------------
 
@@ -52,8 +71,21 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuario`, `mail`, `nombre_usuario`, `password`, `nivel`, `id_perfil`) VALUES
+(1, 'judaslinarez@gmail.com', 'judas26', '7c222fb2927d828af22f592134e8932480637c0d', 'admin', 1);
+
+--
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `foros`
+--
+ALTER TABLE `foros`
+  ADD PRIMARY KEY (`id_foro`);
 
 --
 -- Indices de la tabla `perfiles`
@@ -73,16 +105,22 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `foros`
+--
+ALTER TABLE `foros`
+  MODIFY `id_foro` bigint(255) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `perfiles`
 --
 ALTER TABLE `perfiles`
-  MODIFY `id_perfil` bigint(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_perfil` bigint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` bigint(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` bigint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas
