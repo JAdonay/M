@@ -1,0 +1,20 @@
+.forum__container{
+    padding: 25px;
+    .forum__edit{
+        select{
+            border-bottom-left-radius: 8px;
+            border-top-left-radius: 8px;
+        }
+        button{
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border: 1px solid rgb(207, 207, 207);
+        }
+    }
+}
+#profile__logo__sidebar{
+    height: 15%;
+    width: 35%;
+    margin-left: 21%;
+    border-radius: 100%;
+}

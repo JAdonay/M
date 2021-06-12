@@ -1,0 +1,7 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteBase /MSME/
+RewriteRule ^/$ index.php [L]
+RewriteRule ^foro/$ views/forum.php [L]
+RewriteRule ^mi-perfil/$ views/profile.php [L]
+RewriteRule ^foro/discusionsuicidio/$ views/discusion_suicidio.php [L]

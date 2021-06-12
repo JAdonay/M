@@ -1,0 +1,11 @@
+window.addEventListener('load',()=>{
+    document.querySelector('#icon__openSidebar').addEventListener('click',()=>{
+        document.getElementById('side-menu').style.width='250px';
+        document.getElementById('side-menu').style.marginLeft='250px';
+    });
+    document.querySelector('.btn-close').addEventListener('click',()=>{
+        document.getElementById('side-menu').style.width='0';
+        document.getElementById('side-menu').style.marginLeft='0';
+    });
+    document.querySelector('.discussion').className="fade";
+})

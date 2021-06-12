@@ -1,0 +1,54 @@
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    cursor: pointer;
+}
+#suicide__discussion{
+    background-image: url('../img/suicide_discussion.png');
+    padding: 1px 0 82px 19px;
+    border-radius: 8px;
+    background-size: 105%;
+}
+.content__discussion a, #main a{
+    color: #fff;
+    text-decoration: none;
+}
+.content__discussion h3{
+    text-align: center;
+}
+.discussion{
+    opacity: 0;
+}
+.fade{
+    transition: 1s;
+    opacity: 1;
+}
+#discusion__entry .suicide__discussion{
+    background-image: url('../img/suicide_discussion.png');  
+    padding: 1px 0 137px 19px;
+    background-size: 105%; 
+}
+#discusion__entry #forum__guide{
+    padding: 8px;
+}
+.input-group {
+    display: flex;
+    align-content: stretch;
+  }
+  
+  .input-group > input {
+    flex: 1 0 auto;
+  }
+  
+  /**
+   * Even when I set some dimension-related styles on this
+   * element but not on the input or button, they'll still
+   * line up.
+   */
+  .input-group-addon {
+    background: #eee;
+    border: 1px solid #ccc;
+    padding: 0 2em 1em;
+  }
